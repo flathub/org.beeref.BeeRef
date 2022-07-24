@@ -34,7 +34,9 @@
                 "install -Dm644 org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
 
                 "desktop-file-edit --set-key=Exec --set-value=beeref /app/share/applications/org.beeref.BeeRef.desktop",
-                "desktop-file-edit --set-key=Icon --set-value=org.beeref.BeeRef /app/share/applications/org.beeref.BeeRef.desktop"
+                "desktop-file-edit --set-key=Icon --set-value=org.beeref.BeeRef /app/share/applications/org.beeref.BeeRef.desktop",
+                "desktop-file-edit --set-key=Comment --set-value='Arrange and view your reference images' /app/share/applications/org.beeref.BeeRef.desktop",
+                "desktop-file-edit --set-key=GenericName --set-value='Reference image viewer' /app/share/applications/org.beeref.BeeRef.desktop"
             ],
             "sources": [
                 {
