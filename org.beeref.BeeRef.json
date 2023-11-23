@@ -17,7 +17,7 @@
     ],
     "build-options": {
         "env": [
-          "BASEAPP_REMOVE_WEBENGINE=1"
+            "BASEAPP_REMOVE_WEBENGINE=1"
         ]
     },
     "modules": [
@@ -27,12 +27,10 @@
             "buildsystem": "simple",
             "build-commands": [
                 "python3 -m PyInstaller BeeRef.spec",
-
                 "install -D dist/BeeRef* /app/bin/beeref",
                 "install -Dm644 /run/build/BeeRef/beeref/assets/logo.svg /app/share/icons/hicolor/scalable/apps/org.beeref.BeeRef.svg",
                 "install -Dm644 /run/build/BeeRef/beeref.desktop /app/share/applications/org.beeref.BeeRef.desktop",
                 "install -Dm644 org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
-
                 "desktop-file-edit --set-key=Exec --set-value=beeref /app/share/applications/org.beeref.BeeRef.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=org.beeref.BeeRef /app/share/applications/org.beeref.BeeRef.desktop"
             ],
@@ -40,11 +38,11 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rbreu/beeref.git",
-                    "tag": "v0.2.0",
-                    "commit": "c308c08a07a6bce0ee1ece487f924811f1e56053",
+                    "tag": "v0.3.0",
+                    "commit": "c38f8e3482006a1ca4265fa0f18743e92364f4ab",
                     "x-checker-data": {
-                      "type": "git",
-                      "tag-pattern": "^v([\\d.]+)$"
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
                     }
                 },
                 {
