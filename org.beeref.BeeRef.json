@@ -40,8 +40,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rbreu/beeref.git",
-                    "tag": "v0.3.0",
-                    "commit": "c38f8e3482006a1ca4265fa0f18743e92364f4ab",
+                    "tag": "v0.3.1",
+                    "commit": "6288c47895e7faec9e2c2998a5b5c47a6ab4d140",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
