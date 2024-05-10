@@ -30,7 +30,7 @@
                 "install -D dist/BeeRef* /app/bin/beeref",
                 "install -Dm644 /run/build/BeeRef/beeref/assets/logo.svg /app/share/icons/hicolor/scalable/apps/org.beeref.BeeRef.svg",
                 "install -Dm644 /run/build/BeeRef/beeref.desktop /app/share/applications/org.beeref.BeeRef.desktop",
-                "install -Dm644 org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
+                "install -Dm644 /run/build/BeeRef/org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
                 "desktop-file-edit --set-key=Exec --set-value=beeref /app/share/applications/org.beeref.BeeRef.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=org.beeref.BeeRef /app/share/applications/org.beeref.BeeRef.desktop",
                 "desktop-file-edit --set-key=Comment --set-value='Arrange and view your reference images' /app/share/applications/org.beeref.BeeRef.desktop",
@@ -46,10 +46,6 @@
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
-                },
-                {
-                    "type": "file",
-                    "path": "org.beeref.BeeRef.appdata.xml"
                 }
             ]
         }
