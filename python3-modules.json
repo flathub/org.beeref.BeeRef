@@ -1,19 +1,34 @@
 {
-    "name": "python3-modules",
+    "name": "python3-build",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-rectangle-packer",
+            "name": "python3-pyinstaller",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rectangle-packer>=2.0.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyinstaller==6.6.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d6/b9/9e55447358cb7f6ee2eedc9c1d124850147ca9937489f892fd0e4affb800/rectangle-packer-2.0.1.tar.gz",
-                    "sha256": "dd8e70184d2af8a195d568e0c2c3cc197f0c94c2a477475411e5ea978c67b27d"
+                    "url": "https://files.pythonhosted.org/packages/4d/3f/3bc3f1d83f6e4a7fcb834d3720544ca597590425be5ba9db032b2bf322a2/altgraph-0.17.4-py2.py3-none-any.whl",
+                    "sha256": "642743b4750de17e655e6711601b077bc6598dbfa3ba5fa2b2a35ce12b508dff"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl",
+                    "sha256": "2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/19/f0/4213fadbae8ab5945786c4020f7cb6202e828d90df05be8f2dbc9395bcd9/pyinstaller-6.6.0.tar.gz",
+                    "sha256": "be6bc2c3073d3e84fb7148d3af33ce9b6a7f01cfb154e06314cd1d4c05798a32"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2e/84/079d3bd411f591d825dca78b83093fcc9631ea2f887cb01fa9e19f4c619f/pyinstaller_hooks_contrib-2024.6-py2.py3-none-any.whl",
+                    "sha256": "6cc88dad75261d9e1a7e0c6385139f35dcdbb16640c911a27f6078fe924a38cf"
                 }
             ]
         },
@@ -26,37 +41,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c6/a0/7037c685688a10669dbb1ea122171451accd8537e13a47cc621631b8cdb3/exif-1.3.5-py3-none-any.whl",
-                    "sha256": "88243c43bdb722c365a461ce461c1bec29264115f5ca7b897c204c8f658d37c2"
+                    "url": "https://files.pythonhosted.org/packages/25/75/acd3f11d4717bce8da4957c2b4e6e4d26a3ea079ecc61d42f6f07e30ca5c/exif-1.6.0-py3-none-any.whl",
+                    "sha256": "2d002b5740eb897da43de1e6a8f4ebacf5171b4d0b8bc0182c70aebde1be86d3"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fa/ba/36f26f7ecc290ee9d8b3bdf1634256d5fe5a5490a58b3d2205fde67cbdd1/plum_py-0.8.1-py3-none-any.whl",
-                    "sha256": "2167bc989b8a861bc9d2680d524287e76f56aff12b443651801ceae274da559e"
-                }
-            ]
-        },
-        {
-            "name": "python3-pyinstaller",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyinstaller\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9c/b1/5c9cf5bceade92613196b1be4b9cc1406e82d9edadb3c682da860be96cea/pyinstaller-5.2.tar.gz",
-                    "sha256": "5efc1b3ffb13fe50a51305fe57fb9e6e7bce00d009c16dd3cb76ea4d702a04ab"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3d/fb/8ab57519f2c44efe3476eb06961ee42a87d0d21d75a01aa349fa407b29a7/pyinstaller_hooks_contrib-2022.8-py2.py3-none-any.whl",
-                    "sha256": "e46f099934dd4577fb1ddcf37a99fa04027c92f8f5291c8802f326345988d001"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/84/3f/1a5c9bef54cac9bf41edd6f4aaf61cd52ed578e10ccc607e0278012cb4a5/altgraph-0.17.2-py2.py3-none-any.whl",
-                    "sha256": "743628f2ac6a7c26f5d9223c91ed8ecbba535f506f4b6f558885a8a56a105857"
+                    "url": "https://files.pythonhosted.org/packages/2f/da/8a9bdf5d3ea4b13d3142e0c77d6e85e4c2668aef6e4b9d5e9a6619049bdc/plum_py-0.8.7-py3-none-any.whl",
+                    "sha256": "d791f059ef159adbe3c3b036557b5b431fa07db226a9de106a74e5e57441741d"
                 }
             ]
         },
@@ -64,13 +55,27 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e5/21/a2e4517e3d216f0051687eea3d3317557bde68736f038a3b105ac3809247/lxml-4.6.3.tar.gz",
-                    "sha256": "39b78571b3b30645ac77b95f7c69d1bffc4cf8c3b157c435a34da72e78c82468"
+                    "url": "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz",
+                    "sha256": "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
+                }
+            ]
+        },
+        {
+            "name": "python3-rectangle-packer",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rectangle-packer\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/95/ab/0565c51c247e084f6aab54683393e68fa82547e309085a5cda134629cd3e/rectangle-packer-2.0.2.tar.gz",
+                    "sha256": "34e450029255f726c4a8e6e939a18cad5879f0d9fe588c1878fe85c872dcbe41"
                 }
             ]
         }
