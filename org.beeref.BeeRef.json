@@ -29,8 +29,7 @@
             "name": "BeeRef",
             "buildsystem": "simple",
             "build-commands": [
-                "python3 -m PyInstaller BeeRef.spec",
-                "install -D dist/BeeRef* /app/bin/beeref",
+                "pip3 install --no-deps --prefix=/app .",
                 "install -Dm644 /run/build/BeeRef/beeref/assets/logo.svg /app/share/icons/hicolor/scalable/apps/org.beeref.BeeRef.svg",
                 "install -Dm644 /run/build/BeeRef/beeref.desktop /app/share/applications/org.beeref.BeeRef.desktop",
                 "install -Dm644 /run/build/BeeRef/org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
