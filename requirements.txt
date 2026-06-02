@@ -1,0 +1,6 @@
+# Use the following command to regenaret the Python modules
+# flatpak-pip-generator -r requirements.txt -o python3-modules --checker-data --runtime=org.kde.Sdk//6.11
+
+exif
+lxml
+rectangle-packer
