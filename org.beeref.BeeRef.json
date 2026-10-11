@@ -46,6 +46,7 @@
                     "tag": "v0.3.3",
                     "commit": "f53abad9c8ec34c12130464586d3750eea7279b7",
                     "x-checker-data": {
+                        "is-main-source": true,
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
