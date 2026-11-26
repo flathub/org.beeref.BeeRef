@@ -1,12 +1,14 @@
 {
     "id": "org.beeref.BeeRef",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.9",
+    "runtime-version": "6.11",
     "sdk": "org.kde.Sdk",
     "base": "com.riverbankcomputing.PyQt.BaseApp",
-    "base-version": "6.9",
+    "base-version": "6.11",
     "command": "beeref",
     "separate-locales": false,
+    "rename-desktop-file": "beeref.desktop",
+    "rename-icon": "logo",
     "finish-args": [
         "--share=network",
         "--socket=fallback-x11",
@@ -29,14 +31,13 @@
             "name": "BeeRef",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-deps --prefix=/app .",
-                "install -Dm644 /run/build/BeeRef/beeref/assets/logo.svg /app/share/icons/hicolor/scalable/apps/org.beeref.BeeRef.svg",
-                "install -Dm644 /run/build/BeeRef/beeref.desktop /app/share/applications/org.beeref.BeeRef.desktop",
-                "install -Dm644 /run/build/BeeRef/org.beeref.BeeRef.appdata.xml /app/share/metainfo/org.beeref.BeeRef.appdata.xml",
-                "desktop-file-edit --set-key=Exec --set-value=beeref /app/share/applications/org.beeref.BeeRef.desktop",
-                "desktop-file-edit --set-key=Icon --set-value=org.beeref.BeeRef /app/share/applications/org.beeref.BeeRef.desktop",
-                "desktop-file-edit --set-key=Comment --set-value='Arrange and view your reference images' /app/share/applications/org.beeref.BeeRef.desktop",
-                "desktop-file-edit --set-key=GenericName --set-value='Reference image viewer' /app/share/applications/org.beeref.BeeRef.desktop"
+                "desktop-file-edit --set-key=Exec --set-value=beeref beeref.desktop",
+                "desktop-file-edit --set-comment='Arrange and view your reference images' beeref.desktop",
+                "desktop-file-edit --set-generic-name='Reference image viewer' beeref.desktop",
+                "pip3 install --no-deps --prefix=/app . --no-build-isolation",
+                "install -Dm644 beeref/assets/logo.svg -t /app/share/icons/hicolor/scalable/apps/",
+                "install -Dm644 beeref.desktop -t /app/share/applications/",
+                "install -Dm644 ${FLATPAK_ID}.appdata.xml -t /app/share/metainfo/"
             ],
             "sources": [
                 {
@@ -45,6 +46,7 @@
                     "tag": "v0.3.3",
                     "commit": "f53abad9c8ec34c12130464586d3750eea7279b7",
                     "x-checker-data": {
+                        "is-main-source": true,
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
